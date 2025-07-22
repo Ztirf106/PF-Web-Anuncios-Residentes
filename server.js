@@ -21,11 +21,11 @@ function registrarEvento(usuario, accion, detalles = {}) {
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'index')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Ruta principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index', 'web Anuncios.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Ruta POST para login
